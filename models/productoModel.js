@@ -3,7 +3,7 @@ const ProductoModel = (function () {
 
   let cache = [];
 
-  // 🔽 MENÚ DE RESPALDO CON TUS NUEVOS LINKS ACTUALIZADOS
+  // 🔽 MENÚ DE RESPALDO CON ABSOLUTAMENTE TODOS TUS LINKS ACTUALIZADOS
   const menuDePrueba = [
     {
       id: 1,
@@ -21,7 +21,7 @@ const ProductoModel = (function () {
       descripcion: "Sopa cremosa de papa con queso fresco y aguacate.",
       precio: 7.0,
       stock: 40,
-      imagen: "https://sabor.eluniverso.com/wp-content/uploads/2024/10/OTRA-FOTO-DE-LOCRO-DE-PAPAS-DE-CARLOS-VILLACIS-PARA-REEMPLAZAR-EN-EL-PAPEL.jpg" // 🌟 Actualizado
+      imagen: "https://sabor.eluniverso.com/wp-content/uploads/2024/10/OTRA-FOTO-DE-LOCRO-DE-PAPAS-DE-CARLOS-VILLACIS-PARA-REEMPLAZAR-EN-EL-PAPEL.jpg"
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const ProductoModel = (function () {
       descripcion: "Caldo de pata de res con maní, mote y aguacate.",
       precio: 7.5,
       stock: 35,
-      imagen: "https://rastro.quito.gob.ec/wp-content/uploads/2024/07/CaldoDePatas-1024x683.png" // 🌟 Actualizado
+      imagen: "https://rastro.quito.gob.ec/wp-content/uploads/2024/07/CaldoDePatas-1024x683.png"
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ const ProductoModel = (function () {
       descripcion: "Tortillas de papa con queso, chorizo y huevo frito.",
       precio: 9.5,
       stock: 30,
-      imagen: "https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/e6d7bea8148db1d925409b9fa3b8368f.jpg" // 🌟 Actualizado
+      imagen: "https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/e6d7bea8148db1d925409b9fa3b8368f.jpg"
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ const ProductoModel = (function () {
       descripcion: "Cerdo horneado con mote y llapingachos.",
       precio: 12.0,
       stock: 25,
-      imagen: "https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/144ff6fad3865ecc6d5d5d3a0daacd06.jpg" // 🌟 Actualizado
+      imagen: "https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/144ff6fad3865ecc6d5d5d3a0daacd06.jpg"
     },
     {
       id: 6,
@@ -57,7 +57,7 @@ const ProductoModel = (function () {
       descripcion: "Pollo guisado con cerveza y naranjilla.",
       precio: 9.0,
       stock: 40,
-      imagen: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://selloazul.ec/cdn/shop/articles/Seco_Pollo_MINI_BLOG.png?v=1756138344" // 🌟 Actualizado
     },
     {
       id: 7,
@@ -66,7 +66,7 @@ const ProductoModel = (function () {
       descripcion: "Camarón fresco con limón y chifles.",
       precio: 11.0,
       stock: 30,
-      imagen: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://www.laylita.com/recetas/wp-content/uploads/1-Ceviche-de-camaron-ecuatoriano.jpg" // 🌟 Actualizado
     },
     {
       id: 8,
@@ -75,7 +75,7 @@ const ProductoModel = (function () {
       descripcion: "Pescado en salsa de coco con especias.",
       precio: 13.5,
       stock: 20,
-      imagen: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://comedera.com/wp-content/uploads/sites/9/2022/08/pescado-encocado.jpg" // 🌟 Actualizado
     },
     {
       id: 9,
@@ -84,7 +84,7 @@ const ProductoModel = (function () {
       descripcion: "Masa de plátano verde rellena de queso.",
       precio: 5.5,
       stock: 45,
-      imagen: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://www.cocina-ecuatoriana.com/base/stock/Recipe/bolon-de-verde-mixto/bolon-de-verde-mixto_web.jpg" // 🌟 Actualizado
     },
     {
       id: 10,
@@ -93,7 +93,7 @@ const ProductoModel = (function () {
       descripcion: "Refresco natural de naranjilla ecuatoriana.",
       precio: 2.5,
       stock: 100,
-      imagen: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://www.cocina-ecuatoriana.com/base/stock/Recipe/jugo-de-naranjilla/jugo-de-naranjilla_web.jpg.webp" // 🌟 Actualizado
     },
     {
       id: 11,
@@ -102,7 +102,7 @@ const ProductoModel = (function () {
       descripcion: "Masa de choclo cocida al vapor en hoja.",
       precio: 4.5,
       stock: 50,
-      imagen: "https://images.unsplash.com/photo-1562158074-27ff1e9014b0?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxTrqkMMJ5kukleD9iRfnx3Yp7WznSjjA7FQ&s" // 🌟 Actualizado
     },
     {
       id: 12,
@@ -111,7 +111,7 @@ const ProductoModel = (function () {
       descripcion: "Bizcocho empapado en crema de tres leches.",
       precio: 5.0,
       stock: 35,
-      imagen: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://cdn0.recetasgratis.net/es/posts/0/1/9/torta_tres_leches_8910_600.jpg" // 🌟 Actualizado
     }
   ];
 
