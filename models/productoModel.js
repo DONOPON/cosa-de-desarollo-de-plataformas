@@ -3,7 +3,7 @@ const ProductoModel = (function () {
 
   let cache = [];
 
-  // 🔽 MENÚ DE RESPALDO CON EL LINK DE PRUEBA EN EL ENCEBOLLADO
+  // 🔽 MENÚ DE RESPALDO CON LOS LINKS DE PRUEBA EN EL ENCEBOLLADO Y LOCRO DE PAPA
   const menuDePrueba = [
     {
       id: 1,
@@ -12,7 +12,7 @@ const ProductoModel = (function () {
       descripcion: "Caldo de albacora con yuca, tomate y cebolla curtida.",
       precio: 8.5,
       stock: 50,
-      imagen: "https://storage.googleapis.com/fitia_recipe_images/EC-R-V-00000007%2Fv4%2Frect.jpeg" // 🌟 Link de prueba
+      imagen: "https://storage.googleapis.com/fitia_recipe_images/EC-R-V-00000007%2Fv4%2Frect.jpeg"
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const ProductoModel = (function () {
       descripcion: "Sopa cremosa de papa con queso fresco y aguacate.",
       precio: 7.0,
       stock: 40,
-      imagen: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://www.maxionline.ec/wp-content/uploads/2019/01/locro-de-papa-768x512.jpg" // 🌟 Nuevo link de prueba
     },
     {
       id: 3,
