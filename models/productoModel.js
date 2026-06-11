@@ -3,7 +3,7 @@ const ProductoModel = (function () {
 
   let cache = [];
 
-  // 🔽 MENÚ DE RESPALDO CON IMÁGENES 100% UNSPLASH (BLINDADO PARA GITHUB PAGES)
+  // 🔽 MENÚ DE RESPALDO CON EL LINK DE PRUEBA EN EL ENCEBOLLADO
   const menuDePrueba = [
     {
       id: 1,
@@ -12,7 +12,7 @@ const ProductoModel = (function () {
       descripcion: "Caldo de albacora con yuca, tomate y cebolla curtida.",
       precio: 8.5,
       stock: 50,
-      imagen: "https://images.unsplash.com/photo-1695654316534-1144933a3915?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://storage.googleapis.com/fitia_recipe_images/EC-R-V-00000007%2Fv4%2Frect.jpeg" // 🌟 Link de prueba
     },
     {
       id: 2,
