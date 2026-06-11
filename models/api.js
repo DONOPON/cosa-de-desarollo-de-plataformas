@@ -18,9 +18,9 @@ const ApiModel = (function () {
     try {
       response = await fetch(API_BASE + endpoint, config);
     } catch (err) {
-      const error = new Error("No se pudo conectar con el servidor. Verifica que el backend esté activo.");
-      error.status = 0;
-      throw error;
+      // 🌟 Controlamos el error de conexión para que no rompa los scripts de abajo
+      console.warn("No se pudo conectar con el servidor local. Usando datos de respaldo.");
+      return { data: null, fallback: true };
     }
 
     let data = null;
@@ -36,7 +36,8 @@ const ApiModel = (function () {
       throw error;
     }
 
-    return data;
+    // Retornamos la estructura esperada por el frontend
+    return { data: data };
   }
 
   return {
