@@ -3,7 +3,7 @@ const ProductoModel = (function () {
 
   let cache = [];
 
-  // 🔽 MENÚ DE RESPALDO CON LOS LINKS DE PRUEBA EN EL ENCEBOLLADO Y LOCRO DE PAPA
+  // 🔽 MENÚ DE RESPALDO CON TUS NUEVOS LINKS ACTUALIZADOS
   const menuDePrueba = [
     {
       id: 1,
@@ -21,7 +21,7 @@ const ProductoModel = (function () {
       descripcion: "Sopa cremosa de papa con queso fresco y aguacate.",
       precio: 7.0,
       stock: 40,
-      imagen: "https://www.maxionline.ec/wp-content/uploads/2019/01/locro-de-papa-768x512.jpg" // 🌟 Nuevo link de prueba
+      imagen: "https://sabor.eluniverso.com/wp-content/uploads/2024/10/OTRA-FOTO-DE-LOCRO-DE-PAPAS-DE-CARLOS-VILLACIS-PARA-REEMPLAZAR-EN-EL-PAPEL.jpg" // 🌟 Actualizado
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const ProductoModel = (function () {
       descripcion: "Caldo de pata de res con maní, mote y aguacate.",
       precio: 7.5,
       stock: 35,
-      imagen: "https://images.unsplash.com/photo-1607532941433-304659e8198a?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://rastro.quito.gob.ec/wp-content/uploads/2024/07/CaldoDePatas-1024x683.png" // 🌟 Actualizado
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ const ProductoModel = (function () {
       descripcion: "Tortillas de papa con queso, chorizo y huevo frito.",
       precio: 9.5,
       stock: 30,
-      imagen: "https://images.unsplash.com/photo-1514516345957-556ca7d90a29?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/e6d7bea8148db1d925409b9fa3b8368f.jpg" // 🌟 Actualizado
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ const ProductoModel = (function () {
       descripcion: "Cerdo horneado con mote y llapingachos.",
       precio: 12.0,
       stock: 25,
-      imagen: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80"
+      imagen: "https://www.recetasnestle.com.ec/sites/default/files/srh_recipes/144ff6fad3865ecc6d5d5d3a0daacd06.jpg" // 🌟 Actualizado
     },
     {
       id: 6,
