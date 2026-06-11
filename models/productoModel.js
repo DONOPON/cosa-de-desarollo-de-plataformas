@@ -3,115 +3,115 @@ const ProductoModel = (function () {
 
   let cache = [];
 
-  // 🔽 MENÚ DE RESPALDO CON IMÁGENES REALES DE WIKIPEDIA
+  // 🔽 MENÚ DE RESPALDO CON IMÁGENES COMPATIBLES PARA ENLAZAR
   const menuDePrueba = [
     {
-      id: "mock-1",
+      id: 1,
       nombre: "Encebollado",
       categoria: "Sopas",
       descripcion: "Caldo de albacora con yuca, tomate y cebolla curtida.",
       precio: 8.5,
       stock: 50,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Encebollado.jpg/640px-Encebollado.jpg"
+      imagen: "https://images.unsplash.com/photo-1599487488170-d11ec9c172f0?w=640&q=80"
     },
     {
-      id: "mock-2",
+      id: 2,
       nombre: "Locro de papa",
       categoria: "Sopas",
       descripcion: "Sopa cremosa de papa con queso fresco y aguacate.",
       precio: 7.0,
       stock: 40,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/23/Locro_de_papa.jpg/640px-Locro_de_papa.jpg"
+      imagen: "https://images.unsplash.com/photo-1547592180-85f173990554?w=640&q=80"
     },
     {
-      id: "mock-3",
+      id: 3,
       nombre: "Caldo de patas",
       categoria: "Sopas",
       descripcion: "Caldo de pata de res con maní, mote y aguacate.",
       precio: 7.5,
       stock: 35,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/3/34/Caldo_de_pata.jpg/640px-Caldo_de_pata.jpg"
+      imagen: "https://images.unsplash.com/photo-1603105037880-880cd4edfb0d?w=640&q=80"
     },
     {
-      id: "mock-4",
+      id: 4,
       nombre: "Llapingachos",
       categoria: "Platos fuertes",
       descripcion: "Tortillas de papa con queso, chorizo y huevo frito.",
       precio: 9.5,
       stock: 30,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Llapingachos.jpg/640px-Llapingachos.jpg"
+      imagen: "https://images.unsplash.com/photo-1514516345957-556ca7d90a29?w=640&q=80"
     },
     {
-      id: "mock-5",
+      id: 5,
       nombre: "Hornado",
       categoria: "Platos fuertes",
       descripcion: "Cerdo horneado con mote y llapingachos.",
       precio: 12.0,
       stock: 25,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Hornado_ecuatoriano.jpg/640px-Hornado_ecuatoriano.jpg"
+      imagen: "https://images.unsplash.com/photo-1544025162-d76694265947?w=640&q=80"
     },
     {
-      id: "mock-6",
+      id: 6,
       nombre: "Seco de pollo",
       categoria: "Platos fuertes",
       descripcion: "Pollo guisado con cerveza y naranjilla.",
       precio: 9.0,
       stock: 40,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Seco_de_pollo.jpg/640px-Seco_de_pollo.jpg"
+      imagen: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=640&q=80"
     },
     {
-      id: "mock-7",
+      id: 7,
       nombre: "Ceviche de camarón",
       categoria: "Mariscos",
       descripcion: "Camarón fresco con limón y chifles.",
       precio: 11.0,
       stock: 30,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/b/bf/Ceviche_de_camaron_ecuatoriano.jpg/640px-Ceviche_de_camaron_ecuatoriano.jpg"
+      imagen: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=640&q=80"
     },
     {
-      id: "mock-8",
+      id: 8,
       nombre: "Encocado de pescado",
       categoria: "Mariscos",
       descripcion: "Pescado en salsa de coco con especias.",
       precio: 13.5,
       stock: 20,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Encocado_de_pescado.jpg/640px-Encocado_de_pescado.jpg"
+      imagen: "https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=640&q=80"
     },
     {
-      id: "mock-9",
+      id: 9,
       nombre: "Bolón de verde",
       categoria: "Desayunos",
       descripcion: "Masa de plátano verde rellena de queso.",
       precio: 5.5,
       stock: 45,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Bolon_de_verde.jpg/640px-Bolon_de_verde.jpg"
+      imagen: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=640&q=80"
     },
     {
-      id: "mock-10",
+      id: 10,
       nombre: "Jugo de naranjilla",
       categoria: "Bebidas",
       descripcion: "Refresco natural de naranjilla ecuatoriana.",
       precio: 2.5,
       stock: 100,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/7/71/Naranjilla_juice.jpg/640px-Naranjilla_juice.jpg"
+      imagen: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=640&q=80"
     },
     {
-      id: "mock-11",
+      id: 11,
       nombre: "Humitas",
       categoria: "Snacks",
       descripcion: "Masa de choclo cocida al vapor en hoja.",
       precio: 4.5,
       stock: 50,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Humitas_ecuatorianas.jpg/640px-Humitas_ecuatorianas.jpg"
+      imagen: "https://images.unsplash.com/photo-1565557623262-b51c2513a641?w=640&q=80"
     },
     {
-      id: "mock-12",
+      id: 12,
       nombre: "Tres leches",
       categoria: "Postres",
       descripcion: "Bizcocho empapado en crema de tres leches.",
       precio: 5.0,
       stock: 35,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/thumb/f/f9/Tres_leches_cake.jpg/640px-Tres_leches_cake.jpg"
+      imagen: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=640&q=80"
     }
   ];
 
@@ -121,7 +121,7 @@ const ProductoModel = (function () {
       cache = response.data || [];
       return cache;
     } catch (error) {
-      console.warn("Servidor inactivo. Cargando menú con imágenes de Wikipedia para GitHub Pages.", error);
+      console.warn("Cargando menú alternativo con imágenes públicas.", error);
       cache = menuDePrueba;
       return cache;
     }
@@ -132,7 +132,7 @@ const ProductoModel = (function () {
       const response = await ApiModel.get("/productos/" + id);
       return response.data;
     } catch (error) {
-      return cache.find(p => p.id === id) || null;
+      return cache.find(p => p.id === Number(id) || p.id === id) || null;
     }
   }
 
