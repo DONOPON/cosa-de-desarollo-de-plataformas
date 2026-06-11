@@ -3,7 +3,7 @@ const ProductoModel = (function () {
 
   let cache = [];
 
-  // 🔽 MENÚ DE RESPALDO CON IMÁGENES ESTÁTICAS PÚBLICAS COMPATIBLES CON GITHUB PAGES
+  // 🔽 MENÚ DE RESPALDO CON TUS ENLACES DE PEXELS (COMPATIBLES CON GITHUB PAGES)
   const menuDePrueba = [
     {
       id: 1,
@@ -12,7 +12,7 @@ const ProductoModel = (function () {
       descripcion: "Caldo de albacora con yuca, tomate y cebolla curtida.",
       precio: 8.5,
       stock: 50,
-      imagen: "https://images.unsplash.com/photo-1695654316534-1144933a3915?w=600&auto=format&fit=crop&q=80" // Encebollado tradicional caliente
+      imagen: "https://images.pexels.com/photos/539451/pexels-photo-539451.jpeg?w=640"
     },
     {
       id: 2,
@@ -21,7 +21,7 @@ const ProductoModel = (function () {
       descripcion: "Sopa cremosa de papa con queso fresco y aguacate.",
       precio: 7.0,
       stock: 40,
-      imagen: "https://images.unsplash.com/photo-1547592180-85f173990554?w=600&auto=format&fit=crop&q=80" // Sopa cremosa artesanal
+      imagen: "https://images.pexels.com/photos/1527838/pexels-photo-1527838.jpeg?w=640"
     },
     {
       id: 3,
@@ -30,7 +30,7 @@ const ProductoModel = (function () {
       descripcion: "Caldo de pata de res con maní, mote y aguacate.",
       precio: 7.5,
       stock: 35,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/4/41/Caldo_de_bola_de_verde_ecuatoriano.jpg" // Sopa tradicional andina ecuatoriana
+      imagen: "https://images.pexels.com/photos/2116094/pexels-photo-2116094.jpeg?w=640"
     },
     {
       id: 4,
@@ -39,7 +39,7 @@ const ProductoModel = (function () {
       descripcion: "Tortillas de papa con queso, chorizo y huevo frito.",
       precio: 9.5,
       stock: 30,
-      imagen: "https://images.unsplash.com/photo-1514516345957-556ca7d90a29?w=600&auto=format&fit=crop&q=80" // Tortillas de papa doradas con acompañamiento
+      imagen: "https://images.pexels.com/photos/1437267/pexels-photo-1437267.jpeg?w=640"
     },
     {
       id: 5,
@@ -48,7 +48,7 @@ const ProductoModel = (function () {
       descripcion: "Cerdo horneado con mote y llapingachos.",
       precio: 12.0,
       stock: 25,
-      imagen: "https://images.unsplash.com/photo-1544025162-d76694265947?w=600&auto=format&fit=crop&q=80" // Cerdo asado tradicional con guarniciones
+      imagen: "https://images.pexels.com/photos/1323550/pexels-photo-1323550.jpeg?w=640"
     },
     {
       id: 6,
@@ -57,7 +57,7 @@ const ProductoModel = (function () {
       descripcion: "Pollo guisado con cerveza y naranjilla.",
       precio: 9.0,
       stock: 40,
-      imagen: "https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?w=600&auto=format&fit=crop&q=80" // Estofado criollo con arroz amarillo
+      imagen: "https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?w=640"
     },
     {
       id: 7,
@@ -66,7 +66,7 @@ const ProductoModel = (function () {
       descripcion: "Camarón fresco con limón y chifles.",
       precio: 11.0,
       stock: 30,
-      imagen: "https://images.unsplash.com/photo-1534604973900-c43ab4c2e0ab?w=600&auto=format&fit=crop&q=80" // Ceviche de camarón fresco con cítricos
+      imagen: "https://images.pexels.com/photos/3655916/pexels-photo-3655916.jpeg?w=640"
     },
     {
       id: 8,
@@ -75,7 +75,7 @@ const ProductoModel = (function () {
       descripcion: "Pescado en salsa de coco con especias.",
       precio: 13.5,
       stock: 20,
-      imagen: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=600&auto=format&fit=crop&q=80" // Pescado en salsa caribeña/esmeraldeña
+      imagen: "https://images.pexels.com/photos/2673353/pexels-photo-2673353.jpeg?w=640"
     },
     {
       id: 9,
@@ -84,7 +84,7 @@ const ProductoModel = (function () {
       descripcion: "Masa de plátano verde rellena de queso.",
       precio: 5.5,
       stock: 45,
-      imagen: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600&auto=format&fit=crop&q=80" // Aperitivo de plátano verde frito artesanal
+      imagen: "https://images.pexels.com/photos/5737247/pexels-photo-5737247.jpeg?w=640"
     },
     {
       id: 10,
@@ -93,7 +93,7 @@ const ProductoModel = (function () {
       descripcion: "Refresco natural de naranjilla ecuatoriana.",
       precio: 2.5,
       stock: 100,
-      imagen: "https://images.unsplash.com/photo-1621506289937-a8e4df240d0b?w=600&auto=format&fit=crop&q=80" // Jugo cítrico fresco y natural
+      imagen: "https://images.pexels.com/photos/1132558/pexels-photo-1132558.jpeg?w=640"
     },
     {
       id: 11,
@@ -102,7 +102,7 @@ const ProductoModel = (function () {
       descripcion: "Masa de choclo cocida al vapor en hoja.",
       precio: 4.5,
       stock: 50,
-      imagen: "https://upload.wikimedia.org/wikipedia/commons/e/e0/Humita_01.jpg" // Humita tradicional envuelta en hoja de choclo
+      imagen: "https://images.pexels.com/photos/6605935/pexels-photo-6605935.jpeg?w=640"
     },
     {
       id: 12,
@@ -111,7 +111,7 @@ const ProductoModel = (function () {
       descripcion: "Bizcocho empapado en crema de tres leches.",
       precio: 5.0,
       stock: 35,
-      imagen: "https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?w=600&auto=format&fit=crop&q=80" // Pastel húmedo con crema y canela
+      imagen: "https://images.pexels.com/photos/1414234/pexels-photo-1414234.jpeg?w=640"
     }
   ];
 
@@ -121,7 +121,7 @@ const ProductoModel = (function () {
       cache = response.data || [];
       return cache;
     } catch (error) {
-      console.warn("Servidor inactivo. Cargando menú con imágenes reales fijas.", error);
+      console.warn("Servidor inactivo. Cargando menú con tus imágenes de Pexels.", error);
       cache = menuDePrueba;
       return cache;
     }
